@@ -1,0 +1,51 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void arr()
+{
+	cout<<"Enter the array size ";
+}
+int main()
+{
+int a,b,c,d,array[60];
+	arr();
+	cin>>a;
+	cout<<endl;
+	cout<<"Enter the "<<a<<" elements: \n\n";
+	for(b=0;b<a;b++)
+	{
+		cin>>array[b];
+		cout<<array[b]<< ", ";
+		
+	}
+	cout<<endl<<endl;
+	cout<<"Your data: ";
+	for(b=0;b<a;b++)
+	{
+		
+		cout<<array[b]<< ", ";
+		
+	}
+	cout<<"\n\nAfter sorting to ascending order by selection sort. ";
+	cout<<"\n\nSorted data: ";
+	for(b=0;b<a;b++)
+{		
+	for(c=b+1;c<a;c++)
+	{
+		if(array[b]>array[c])
+		{
+			d=array[b];
+			array[b]=array[c];
+			array[c]=d;
+		}
+	}
+}
+for(b=0;b<a;b++)
+{
+cout<<array[b]<<" ";
+}
+	
+	return 0;
+}
