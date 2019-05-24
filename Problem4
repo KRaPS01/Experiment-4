@@ -1,0 +1,98 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+float addition (float a, float b)
+{
+	float c;
+	c = a+b;
+	return c;	
+}
+float subtraction (float a, float b)
+{
+	float c;
+	c = a-b;
+	return c;	
+}
+float multiplication (float a, float b)
+{
+	float c;
+	c = a*b;
+	return c;	
+}
+float division (float a, float b)
+{
+	float c;
+	c = a/b;
+	return c;	
+}
+int modulus1 (int a, int b)
+{
+	int c;
+	c = a%b;
+	return c;	
+}
+
+int main()
+{
+	char choice,yes;
+	float d,e,f;
+	
+	do
+	{	
+	cout<<"Menu: ";
+	cout<<"\n1. Add (+)";
+	cout<<"\n2. Subtract (-)";
+	cout<<"\n3. Multiply (*)";
+	cout<<"\n4. Divide (/)";
+	cout<<"\n5. Modulus (%)";
+	
+	cout<<"\n\nEnter your choice: ";
+	cin>>choice;
+	cout<<"\n\nEnter your first number: ";
+	cin>>d;
+	cout<<"Enter your second number: ";
+	cin>>e;
+	
+	switch (choice)
+	{
+		case '+':
+		f = addition (d,e);
+		cout<<"\n\nResult: "<<f;
+		break;			
+	}
+		switch (choice)
+	{
+		case '-':
+		f = subtraction (d,e);
+		cout<<"\n\nResult: "<<f;
+		break;			
+	}
+		switch (choice)
+	{
+		case '*':
+		f = multiplication (d,e);
+		cout<<"\n\nResult: "<<f;
+		break;			
+	}
+		switch (choice)
+	{
+		case '/':
+		f = division (d,e);
+		cout<<"\n\nResult: "<<f;
+		break;			
+	}
+		switch (choice)
+	{
+		case '%':
+		f = modulus1 (d,e);
+		cout<<"\n\nResult: "<<f;
+		break;			
+	}
+	cout<<"\n\nYou want to input again? Press (y) to repeat.";
+	cin>>yes;
+	cout<<endl;
+}while (yes == 'y' || yes =='Y');
+	system("pause");
+	
+	return 0;
+}
